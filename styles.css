@@ -66,16 +66,10 @@ a {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 24px 48px;
+    padding: 28px 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav-line {
-    height: 1px;
-    background: var(--border);
-    margin: 0 48px;
 }
 
 .nav-logo {
@@ -127,10 +121,6 @@ a {
         padding: 24px;
     }
     
-    .nav-line {
-        margin: 0 24px;
-    }
-    
     .nav-links a:not(.nav-cta) {
         display: none;
     }
@@ -142,18 +132,19 @@ a {
 
 /* Hero */
 .hero {
-    padding: 160px 0 100px;
+    padding: 140px 0 100px;
+    border-bottom: 1px solid var(--border);
 }
 
 .hero-intro {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 64px;
+    margin-bottom: 48px;
 }
 
 .intro-text {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--text);
 }
 
@@ -161,7 +152,7 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--text);
 }
 
@@ -174,16 +165,16 @@ a {
 
 .hero-headline {
     font-family: var(--font-serif);
-    font-size: clamp(36px, 5.5vw, 58px);
+    font-size: clamp(32px, 4.5vw, 50px);
     font-weight: 400;
     font-style: italic;
-    line-height: 1.2;
-    margin-bottom: 48px;
+    line-height: 1.25;
+    margin-bottom: 40px;
 }
 
 .rotating-text {
     display: inline-block;
-    height: 1.2em;
+    height: 1.25em;
     overflow: hidden;
     vertical-align: bottom;
 }
@@ -202,45 +193,29 @@ a {
 }
 
 .hero-description {
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.7;
     color: var(--text);
-    max-width: 1000px;
-    margin-bottom: 64px;
-}
-
-.availability-banner {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 28px 40px;
-}
-
-.availability-banner p {
-    font-size: 17px;
-    color: var(--text);
-    text-align: center;
+    max-width: 900px;
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding: 140px 0 80px;
+        padding: 120px 0 80px;
     }
     
     .hero-intro {
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
-        margin-bottom: 48px;
-    }
-    
-    .hero-description {
-        font-size: 17px;
+        margin-bottom: 40px;
     }
 }
 
 /* Brands */
 .brands {
     padding: 80px 0;
+    border-bottom: 1px solid var(--border);
 }
 
 .brands-label {
