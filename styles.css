@@ -164,10 +164,10 @@ a {
 }
 
 .hero-headline {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: clamp(32px, 4.5vw, 50px);
     font-weight: 400;
-    font-style: italic;
+    font-style: normal;
     line-height: 1.25;
     margin-bottom: 40px;
 }
