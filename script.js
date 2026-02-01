@@ -1,5 +1,5 @@
 // ===================================
-// Emmanuel Joseph Portfolio - Scripts
+// Folusho Joseph Portfolio - Scripts
 // ===================================
 
 // Navigation scroll effect
@@ -9,8 +9,7 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    // Add scrolled class when page is scrolled
-    if (currentScroll > 50) {
+    if (currentScroll > 100) {
         nav.classList.add('scrolled');
     } else {
         nav.classList.remove('scrolled');
@@ -36,6 +35,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Add animation class to hero rotating words for seamless loop
+const rotatingWrapper = document.querySelector('.hero-rotating');
+if (rotatingWrapper) {
+    // Clone first word to end for seamless loop
+    const firstWord = rotatingWrapper.querySelector('.rotating-word');
+    if (firstWord) {
+        const clone = firstWord.cloneNode(true);
+        rotatingWrapper.appendChild(clone);
+    }
+}
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observe all major sections
+document.querySelectorAll('.service-card, .work-card, .about-card').forEach(el => {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+});
+
 // Console Easter egg
 console.log('%c👋 Hey there!', 'font-size: 24px; font-weight: bold;');
-console.log('%cInterested in working together? Let\'s talk: Emmanuelfolushojoseph@gmail.com', 'font-size: 14px; color: #818cf8;');
+console.log('%cLooking for a brand designer? Let\'s talk: Emmanuelfolushojoseph@gmail.com', 'font-size: 14px; color: #888;');
